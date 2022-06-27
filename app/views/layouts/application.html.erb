@@ -20,6 +20,11 @@
       <button data-action="toggle#toggle">Toggle</button>
     </div>
 
+    <div data-controller='toggle'>
+      <button data-action="toggle#replace" data-toggle-target="first">Click me</button>
+      <button class='hidden' data-action="toggle#replace" data-toggle-target="second">Now click me</button>
+    </div>
+
     
 
     <%= yield %>
