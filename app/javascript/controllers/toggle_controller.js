@@ -4,10 +4,8 @@ export default class extends Controller {
   static targets = ['hideable']
 
   toggle() {
-    if (this.hideableTarget.classList == 'hidden')
-      this.hideableTarget.classList.remove('hidden');
-    else
-      (this.hideableTarget.classList.add('hidden'));
+    let cssClass = this.hideableTarget.classList
+    cssClass == 'hidden' ? cssClass.remove('hidden') : cssClass.add('hidden');
     };
   
 }
