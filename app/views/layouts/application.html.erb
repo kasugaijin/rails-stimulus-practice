@@ -30,6 +30,11 @@
       <label for="test">Clicking the box should highlight the div</label><br>
     </div>
 
+    <div data-controller='limit'>
+      <div data-limit-target='output'></div>
+      <textarea data-limit-target='input' data-action='limit#limit'></textarea>
+    </div>
+
     <%= yield %>
   </body>
 </html>
