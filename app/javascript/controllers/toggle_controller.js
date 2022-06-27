@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ['hideable', 'first', 'second']
+  static targets = ['hideable', 'first', 'second', 'check']
 
   toggle() {
     let cssClass = this.hideableTarget.classList;
@@ -20,6 +20,11 @@ export default class extends Controller {
       first.remove('hidden')
       second.add('hidden')
     }
+  }
+
+  checkbox() {
+    let cscClass = this.checkTarget.classList
+    cscClass == '' ? cscClass.add('highlight') : cscClass.remove('highlight')
   }
   
 }
