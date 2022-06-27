@@ -12,10 +12,15 @@
 
   <body>
     <div data-controller='hello'>
-      <h1 data-target='hello.output'>Test</h1>
+      <h1 data-hello-target="output"></h1>
     </div>
 
-    <p>This is a test</p>
+    <div data-controller='toggle'>
+      <p data-toggle-target="hideable">This paragraph plays peek a boo</p>
+      <button data-action="toggle#toggle">Toggle</button>
+    </div>
+
+    
 
     <%= yield %>
   </body>
